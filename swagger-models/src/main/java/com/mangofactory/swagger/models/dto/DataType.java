@@ -51,7 +51,7 @@ public class DataType implements SwaggerDataType {
     if (isOfType(initialType, "UUID")) {
       return new PrimitiveFormatDataType("string", "uuid");
     }
-    if (isOfType(initialType, "date")) {
+    if (isOfType(initialType, "date") || isOfType(initialType, "LocalDate")) {
       return new PrimitiveFormatDataType("string", "date");
     }
     if (isOfType(initialType, "date-time")) {
